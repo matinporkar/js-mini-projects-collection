@@ -1,3 +1,5 @@
+![Cover](./cover.png)
+
 # JavaScript Mini Projects Collection
 
 This repository contains a collection of practical and interactive JavaScript mini-projects created to strengthen core programming skills and build hands-on experience with modern web development.
