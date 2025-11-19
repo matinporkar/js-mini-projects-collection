@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker Pro</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; display: flex; justify-content: center; padding-top: 40px; }
+    .container { background: #fff; padding: 2rem; width: 520px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    h1 { text-align: center; margin-bottom: 1.5rem; }
+    .row { display: flex; flex-direction: column; margin-bottom: 1rem; }
+    input, select { padding: 0.7rem; border: 1px solid #ccc; border-radius: 10px; font-size: 1rem; }
+    button { width: 100%; padding: 0.8rem; background: #333; color: #fff; border: none; border-radius: 12px; cursor: pointer; margin-top: 0.4rem; }
+    button:hover { background: #555; }
+    #btnDelete {width: 100px;}
+    ul { list-style: none; padding: 0; margin-top: 1rem; }
+    li { background: #f0f0f0; padding: 0.8rem; border-radius: 10px; margin-bottom: 10px; display: flex; justify-content: space-between; }
+    .totalBox { margin-top: 1.5rem; text-align: center; font-weight: bold; font-size: 1.3rem; }
+    .filters { display: flex; gap: 10px; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker Pro</h1>
+
+    <div class="row">
+      <label>Title:</label>
+      <input type="text" id="title" placeholder="Expense title" />
+    </div>
+
+    <div class="row">
+      <label>Amount:</label>
+      <input type="number" id="amount" placeholder="Amount" />
+    </div>
+
+    <div class="row">
+      <label>Category:</label>
+      <select id="category">
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Shopping</option>
+        <option>Health</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <button id="addBtn">Add Expense</button>
+
+    <div class="filters">
+      <select id="filterCategory">
+        <option value="all">All Categories</option>
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Shopping</option>
+        <option>Health</option>
+        <option>Other</option>
+      </select>
+
+      <select id="filterMonth">
+        <option value="all">All Months</option>
+        <option value="0">January</option>
+        <option value="1">February</option>
+        <option value="2">March</option>
+        <option value="3">April</option>
+        <option value="4">May</option>
+        <option value="5">June</option>
+        <option value="6">July</option>
+        <option value="7">August</option>
+        <option value="8">September</option>
+        <option value="9">October</option>
+        <option value="10">November</option>
+        <option value="11">December</option>
+      </select>
+    </div>
+
+    <ul id="expenseList"></ul>
+
+    <div class="totalBox" id="totalBox">Total: $0</div>
+
+    <h2 style="text-align:center; margin-top:2rem;">Monthly Chart</h2>
+    <canvas id="chartCanvas"></canvas>
+  </div>
+
+<script src="./main.js"></script>
+</body>
+</html>
