@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    .choices {
+      display: flex;
+      justify-content: space-around;
+      margin: 1.5rem 0;
+    }
+    .choice {
+      background: #eee;
+      padding: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 1.2rem;
+    }
+    .choice:hover {
+      background: #ddd;
+    }
+    .result {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .score {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      background: #333;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="choices">
+      <div class="choice" data-choice="rock">✊</div>
+      <div class="choice" data-choice="paper">✋</div>
+      <div class="choice" data-choice="scissors">✌️</div>
+    </div>
+
+    <div class="result" id="result">Choose your move</div>
+    <div class="score" id="score">You: 0 | Computer: 0</div>
+
+    <button id="reset">Reset</button>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
